@@ -22,7 +22,6 @@ body {
   margin: 0;
 }
 
-/* GENEL LAYOUT */
 .container {
   display: flex;
   justify-content: center;
@@ -32,14 +31,14 @@ body {
   gap: 50px;
 }
 
-/* MOCKUP */
+
 .mockup img {
   width: 550px;
   margin-top: -30px;
   height: 500px;
 }
 
-/* LOGO */
+
 .logo img {
   width: 240px;
   height: auto;
@@ -48,7 +47,7 @@ body {
   margin-top: -50px;
 }
 
-/* FORM */
+
 .form-container {
   width: 350px;
 }
@@ -128,7 +127,6 @@ button {
   margin-left: 80px;
 }
 
-/* SIGNUP / LOGIN BOX */
 .signup-box,
 .signlog-box {
   padding: 35px;
@@ -164,7 +162,7 @@ footer {
   margin: 0 6px;
 }
 
-/* FORM WIDTH DUPLICATE FIX */
+
 .form input {
   width: 80%;
   padding: 10px;
@@ -176,7 +174,7 @@ footer {
   background-color: var(--lightgray);
 }
 
-/* REGISTER PAGE STYLES */
+
 .register-container {
   display: flex;
   flex-direction: column;
@@ -281,7 +279,7 @@ footer {
   font-weight: bold;
 }
 
-/* RESPONSIVE (MOBILE) */
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
