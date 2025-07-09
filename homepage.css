@@ -67,7 +67,6 @@ body {
   display: flex;
   gap: 10px;
   margin-top: 10px;
-  overflow-x: auto;
 }
 
 .story {
@@ -80,52 +79,28 @@ body {
   align-items: center;
   font-size: 11px;
   border: 2px solid var(--border);
-  overflow: hidden;
-}
-
-.story img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
 }
 
 .post {
   background-color: var(--white);
   border: 1px solid var(--border);
   margin-bottom: 20px;
-  border-radius: 4px;
-  overflow: hidden;
 }
 
 .post-user {
   padding: 10px;
   border-bottom: 1px solid var(--border);
   font-size: 14px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.post-user img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
 }
 
 .post img {
   width: 100%;
-  height: auto;
-  max-height: 600px;
-  object-fit: cover;
   display: block;
 }
 
 .post-caption {
   padding: 10px;
   font-size: 14px;
-  line-height: 1.4;
 }
 
 .suggestions {
@@ -133,11 +108,6 @@ body {
   width: 300px;
   padding: 20px;
   background-color: var(--white);
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100vh;
-  border-left: 1px solid var(--border);
 }
 
 .profile-top {
@@ -148,14 +118,11 @@ body {
 }
 
 .profile-top img {
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
 }
 
 .username {
   font-weight: bold;
-  font-size: 14px;
 }
 
 .follow-suggestions {
@@ -167,12 +134,6 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 10px 0;
-}
-
-.suggest img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
 }
 
 .suggest a {
