@@ -2,52 +2,52 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kaydol</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram - Kaydol</title>
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-  <div class="form-container">
-    <div class="form-box">
-      <div class="logo">
-        <img src="img/logo.png" alt="Instagram Logo" />
-        <p>Arkadaşlarının Fotoğraf ve videolarını görmek için Kaydol</p>
+ <div class="form-container">
+        <div class="logo">
+          <img src="img/logo.png" alt="Instagram Logo">
+        <form>
+      <p>Arkadaşlarının fotoğraf ve videolarını görmek için kaydol.</p>
+
+      <a href="#" class="register-facebook">Facebook ile Giriş Yap</a>
+
+      <div class="register-divider">
+        <div class="register-line"></div>
+        <div class="register-or">YA DA</div>
+        <div class="register-line"></div>
       </div>
 
-      <a href="#" class="fb-login"><i class="fa-brands fa-facebook"></i> Facebook ile Giriş Yap</a>
-
-      <div class="divider">
-        <div class="line"></div>
-        <div class="or">YA DA</div>
-        <div class="line"></div>
-      </div>
-
-      <form>
-        <input type="text" placeholder="Cep Telefonu numarası veya e-posta" required />
+      <form class="register-form" action="#">
+        <input type="text" placeholder="Cep Telefonu Numarası veya E-posta" required />
         <input type="password" placeholder="Şifre" required />
         <input type="text" placeholder="Adı Soyadı" required />
-        <input type="text" placeholder="Kullanıcı Adı" required />
-        <button type="submit">Kaydol</button>
+        <input type="text" placeholder="Kullanıcı adı" required />
+        <button type="submit" class="register-button">Kaydol</button>
       </form>
 
-      <p>
-        Hizmetimizi kullanan kişiler senin iletişim bilgilerini Instagram'a yüklemiş olabilir.
-        <a href="#">Daha Fazla Bilgi Al</a>
-      </p>
-      <p>
+      <div class="register-policy">
+        Hizmetimizi kullanan kişiler senin iletişim bilgilerini Instagram’a yüklemiş olabilir. 
+        <a href="#">Daha Fazla Bilgi Al</a><br><br>
         Kaydolarak, <a href="#">Koşullarımızı</a>, <a href="#">Gizlilik İlkemizi</a> ve <a href="#">Çerezler İlkemizi</a> kabul etmiş olursun.
-      </p>
+      </div>
     </div>
 
-    <div class="signlog-box">
-      Hesabın var mı? <a href="login.html">Giriş Yap</a>
+    <div class="register-login-box">
+      Hesabın var mı? <a href="#">Giriş yap</a>
     </div>
-    
+
+    <div class="app-download">
+      <p>Uygulamayı indir.</p>
+      <div class="store-links">
+        <img src="https://cdn.wmaraci.com/nedir/play-store.png" alt="Google Play" width="136" height="40" />
+        <img src="https://cdn.wmaraci.com/nedir/app-store.png" alt="App Store" width="136" height="40" />
+      </div>
+    </div>
   </div>
 
   <footer>
@@ -63,10 +63,10 @@
       <a href="#">Konumlar</a>
       <a href="#">Instagram Lite</a>
       <a href="#">Threads</a>
-      <a href="#">Kişi Yükleme ve Hesabı Olmayan Kişiler</a>
+      <a href="#">Kişi Yükleme</a>
       <a href="#">Meta Verified</a>
     </div>
-    <div class="footer-copy">© 2025 Instagram from Meta</div>
+    <p>Türkçe ⌵ © 2025 Instagram from Meta</p>
   </footer>
 
 </body>

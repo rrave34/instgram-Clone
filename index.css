@@ -4,13 +4,13 @@
   --gray: #737373;
   --background: #fafafa;
   --white: #ffffff;
- --navyblue: #00266d;
+  --navyblue: #00266d;
   --text: #262626;
   --purple: #5b0496fa;
- --lightpurple: #a047fffa;
- --lightgray: #e5e5e5;
- --black: #000000;
- --dark-cyan: #0069ad;
+  --lightpurple: #a047fffa;
+  --lightgray: #e5e5e5;
+  --black: #000000;
+  --dark-cyan: #0069ad;
 }
 
 body {
@@ -22,6 +22,7 @@ body {
   margin: 0;
 }
 
+/* GENEL LAYOUT */
 .container {
   display: flex;
   justify-content: center;
@@ -31,12 +32,14 @@ body {
   gap: 50px;
 }
 
+/* MOCKUP */
 .mockup img {
   width: 550px;
-margin-top: -30px;
-height: 500px;
+  margin-top: -30px;
+  height: 500px;
 }
 
+/* LOGO */
 .logo img {
   width: 240px;
   height: auto;
@@ -44,6 +47,8 @@ height: 500px;
   margin: 0 auto 20px auto;
   margin-top: -50px;
 }
+
+/* FORM */
 .form-container {
   width: 350px;
 }
@@ -70,7 +75,6 @@ form input {
   border: 1px solid var(--border);
   border-radius: 3px;
   background-color: var(--lightgray);
-
 }
 
 button {
@@ -83,7 +87,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
- margin-right: 70px;
+  margin-right: 70px;
 }
 
 .divider {
@@ -124,66 +128,24 @@ button {
   margin-left: 80px;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--background);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  margin: 40px auto;
-  margin-top: 210px;
-  max-width: 900px;
-  gap: 50px;
-}
-.signup-box {
-  padding: 35px;
-  margin-top: 10px;
-  text-align: center;
-  font-size: 14px;
-margin-right: 50px;
-}
-
-.signup-box a {
-  text-decoration: none;
-  color: var(--dark-cyan);
-  font-weight: bold;
-}
-
-footer {
-  margin-top: 80px;
-  font-size: 12px;
-  text-align: center;
-  color: var(--gray);
-  padding: 30px 10px;
-}
-
-.footer-links {
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  color: var(--gray);
-  text-decoration: none;
-  margin: 0 6px;
-}
+/* SIGNUP / LOGIN BOX */
+.signup-box,
 .signlog-box {
   padding: 35px;
   margin-top: 10px;
   text-align: center;
   font-size: 14px;
-margin-right: 50px;
+  margin-right: 50px;
 }
 
+.signup-box a,
 .signlog-box a {
   text-decoration: none;
   color: var(--dark-cyan);
   font-weight: bold;
 }
+
+/* FOOTER */
 footer {
   margin-top: 80px;
   font-size: 12px;
@@ -201,13 +163,8 @@ footer {
   text-decoration: none;
   margin: 0 6px;
 }
-.logo img {
-  width: 240px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px auto;
-  margin-top: -50px;
-}
+
+/* FORM WIDTH DUPLICATE FIX */
 .form input {
   width: 80%;
   padding: 10px;
@@ -217,12 +174,114 @@ footer {
   border: 1px solid var(--border);
   border-radius: 3px;
   background-color: var(--lightgray);
-
 }
 
+/* REGISTER PAGE STYLES */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+.logo img {
+  width: 240px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  margin-top: 6 0px;
+}
+.register-box {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  padding: 40px 30px;
+  width: 350px;
+  text-align: center;
+}
 
+.register-logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
 
+.register-form input {
+  width: 35px;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background-color: var(--lightgray);
+}
 
+.register-button {
+  width: 90%;
+  padding: 10px;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.register-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.register-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border);
+}
+
+.register-or {
+  margin: 0 10px;
+  color: var(--gray);
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.register-facebook {
+  color: var(--main-blue);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 10px 0;
+  margin-right: 150px;
+  margin-left: 50px;
+}
+
+.register-policy {
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.register-policy a {
+  color: var(--dark-cyan);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-login-box {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.register-login-box a {
+  text-decoration: none;
+  color: var(--dark-cyan);
+  font-weight: bold;
+}
+
+/* RESPONSIVE (MOBILE) */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -265,7 +324,8 @@ footer {
     text-align: center;
   }
 
-  .signup-box {
+  .signup-box,
+  .signlog-box {
     margin-right: 0;
     padding: 20px;
   }
@@ -277,10 +337,27 @@ footer {
   .footer-links {
     flex-wrap: wrap;
     justify-content: center;
+    display: inline-block;
+    margin: 4px 6px;
   }
 
-  .footer-links{
-    display: inline-block;
-    margin: 4px 6 px;
+  .register-container {
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .register-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .register-form input,
+  .register-button {
+    width: 100%;
+  }
+
+  .register-login-box {
+    font-size: 13px;
+    padding: 15px 0;
   }
 }
