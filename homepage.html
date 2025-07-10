@@ -3,139 +3,280 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram - Ana Sayfa</title>
-  <link rel="stylesheet" href="homepage.css">
+  <title>Instagram Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
+    :root {
+      --background: #fafafa;
+      --white: #ffffff;
+      --border: #ccc;
+      --text-dark: #262626;
+      --text-light: #888;
+      --blue: #0095f6;
+      --gradient: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: var(--background);
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      color: var(--text-dark);
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .sidebar {
+      width: 220px;
+      padding-right: 20px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+    }
+
+    .sidebar nav ul li {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      cursor: pointer;
+      gap: 12px;
+      font-size: 16px;
+    }
+
+    .sidebar nav ul li i {
+      font-size: 18px;
+    }
+
+    .sidebar nav ul li img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+
+    .more, .meta {
+      margin-top: 30px;
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    .feed {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .stories {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
     .story {
-      padding: 3px;
-      border-radius: 50%;
-      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 12px;
+      color: var(--text-dark);
     }
+
     .story img {
-      width: 60px;
-      height: 60px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid white;
+      padding: 2px;
+      background: var(--gradient);
     }
-    .post-user img {
+
+    .story span {
+      margin-top: 4px;
+    }
+
+    .post {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .post-header {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .post-actions {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .likes {
+      font-weight: bold;
+    }
+
+    .caption {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .sidebar-right {
+      width: 250px;
+      padding-left: 20px;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .user img {
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      margin-right: 8px;
+      margin-right: 10px;
     }
-    .profile-top img {
-      width: 40px;
-      height: 40px;
-      object-fit: cover;
+
+    .logout {
+      color: var(--blue);
+      cursor: pointer;
     }
-    .suggest img {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      object-fit: cover;
+
+    .suggestions p {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+
+    .suggestions ul {
+      list-style: none;
+    }
+
+    .suggestions ul li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .suggestions ul li button {
+      background-color: var(--blue);
+      color: var(--white);
+      border: none;
+      border-radius: 4px;
+      padding: 5px 10px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">Instagram</div>
+      <nav>
+        <ul>
+          <li><i class="fas fa-home"></i> <strong>Anasayfa</strong></li>
+          <li><i class="fas fa-search"></i> Ara</li>
+          <li><i class="fas fa-compass"></i> Keşfet</li>
+          <li><i class="fas fa-clapperboard"></i> Reels</li>
+          <li><i class="fas fa-paper-plane"></i> Mesajlar</li>
+          <li><i class="far fa-heart"></i> Bildirimler</li>
+          <li><i class="fas fa-plus-square"></i> Oluştur</li>
+          <li><img src="https://i.pravatar.cc/40?img=68" alt="profil"> Profil</li>
+        </ul>
+      </nav>
+      <div class="more">Daha Fazla</div>
+      <div class="meta">Meta'nın diğer ürünleri</div>
+    </aside>
 
-  
-  <div class="sidebar">
-    <div class="logo">Instagram</div>
-    <div class="menu">
-      <a href="#"><img src="img/home_5258460.png" width="20"> Anasayfa</a>
-      <a href="#"><img src="img/magnifiying-glass_93642.png" width="20"> Ara</a>
-      <a href="#"><img src="img/explore.png" width="20"> Keşfet</a>
-      <a href="#"><img src="img/reels.png" width="20"> Reels</a>
-      <a href="#"><img src="img/messege.png" width="20"> Mesajlar</a>
-      <a href="#"><img src="img/heart_344335.png" width="20"> Bildirimler</a>
-      <a href="#"><img src="img/read_13900839.png" width="20"> Oluştur</a>
-      <a href="#"><img src="https://yt3.googleusercontent.com/ytc/AIdro_l4szw3zyRFLKAiVEinLWCcJDoN9eCD_q7z2OUOify0cKk=s900-c-k-c0x00ffffff-no-rj" width="20" style="border-radius:50%"> Profil</a>
-    </div>
-    <div class="more">
-      <a href="#"><img src="img/justify-align_235512.png" width="20"> Daha Fazla</a>
-    </div>
-  </div>
-
-
-  <div class="main-feed">
-
-   
-    <div class="stories">
-      <div class="story-circles">
-        <div class="story"><img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Hikaye 1"></div>
-        <div class="story"><img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Hikaye 2"></div>
-        <div class="story"><img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Hikaye 3"></div>
-        <div class="story"><img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Hikaye 4"></div>
-        <div class="story"><img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Hikaye 5"></div>
-      </div>
-    </div>
-
-
-    <div class="post">
-      <div class="post-user">
-        <img src="https://i.pinimg.com/originals/e3/53/da/e353daa277407c0c21b7471168ba01c6.jpg" alt="pp"> genckemalizm
-      </div>
-      <img src="https://klimbim2014.wordpress.com/wp-content/uploads/2017/04/mustafa-kemal-ataturk-n1881-1938-turkish-soldier-and-statesman-photograph-ff7yb0.jpg" width="150px" height="305px" alt="Gönderi Resmi">
-      <div class="post-caption">
-        <strong>genckemalizm</strong> Atam Ayrı bir Karizma <br>
-        <span style="color: var(--gray); font-size: 12px;">2 saat önce</span>
-      </div>
-    </div>
-
- 
-    <div class="post">
-      <div class="post-user">
-        <img src="https://yt3.googleusercontent.com/GTYKJWnWsrwlrmEnuac84-vrq65v_CKNr8OjFi8MeRzaID6czu_vNbxfME6EGWHQiX2L-qHz=s900-c-k-c0x00ffffff-no-rj" alt="pp"> ardenpapazyan
-      </div>
-      <img src="https://i.ytimg.com/vi/9cln3-S-KUE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDQVNblkg1M6VqpzwfxD5-Hzl08Qw" width="150px" height="305px" alt="Gönderi Resmi">
-      <div class="post-caption">
-        <strong>chiara.art</strong> İzmir sokakları... 🎨🖌️<br>
-        <span style="color: var(--gray); font-size: 12px;">5 saat önce</span>
-      </div>
-    </div>
-
-  </div>
-
-
-  <div class="suggestions">
-    <div class="profile-top">
-      <img src="https://yt3.googleusercontent.com/ytc/AIdro_l4szw3zyRFLKAiVEinLWCcJDoN9eCD_q7z2OUOify0cKk=s900-c-k-c0x00ffffff-no-rj" alt="Profil">
-      <div>
-        <div class="username">grkn</div>
-        <div style="color: var(--gray); font-size: 12px;">Gürkan Bayburt</div>
-      </div>
-    </div>
-
-    <div class="follow-suggestions">
-      <strong>Senin için Önerilenler</strong>
-
-      <div class="suggest">
-        <div style="display:flex; align-items:center; gap:10px;">
-          <img src="https://pbs.twimg.com/media/F3RQdl9XAAADu2A.jpg:large" alt="sugg1">
-          <div style="font-size: 14px;">fred8offical</div>
+    <main class="feed">
+      <div class="stories">
+        <div class="story">
+          <img src="https://i.pravatar.cc/60?img=1" alt="">
+          <span>ahmet</span>
         </div>
-        <a href="#">Takip Et</a>
+        <div class="story">
+          <img src="https://i.pravatar.cc/60?img=2" alt="">
+          <span>ayşe</span>
+        </div>
+        <div class="story">
+          <img src="https://i.pravatar.cc/60?img=3" alt="">
+          <span>mehmet</span>
+        </div>
+        <div class="story">
+          <img src="https://i.pravatar.cc/60?img=4" alt="">
+          <span>elif</span>
+        </div>
       </div>
 
-      <div class="suggest">
-        <div style="display:flex; align-items:center; gap:10px;">
-          <img src="https://pbs.twimg.com/profile_images/1910396725786791937/5Hk0U46-_400x400.jpg" alt="sugg2">
-          <div style="font-size: 14px;">xantarescsgo</div>
+      <div class="post">
+        <div class="post-header">
+          <strong>genckemalizm</strong> <span>· 2 saat önce</span>
         </div>
-        <a href="#">Takip Et</a>
+        <img src="https://isteataturk.com/gorseller/1601138042_ataturk.jpg " height="502px" alt="Atatürk ve köpekleri">
+        <div class="post-actions">♥ 💬  ⌲</div>
+        <div class="likes">25.312 beğenme</div>
+        <div class="caption">
+          <strong>genckemalizm</strong> Atam Ayrı bir Karizma
+        </div>
       </div>
 
-      <div class="suggest">
-        <div style="display:flex; align-items:center; gap:10px;">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5dKUiPoQzl1eGBR_TGJaWLXDl5OowxUcHiQ&s" alt="sugg3">
-          <div style="font-size: 14px;">trcsoffical</div>
+      <div class="post">
+        <div class="post-header">
+          <strong>ardenpapazyan</strong>
         </div>
-        <a href="#">Takip Et</a>
+        <img src="https://i.ytimg.com/vi/KiIjLlOqYFc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB0oar3bn7yKUCSvkvnKuNC7jOwjg"  alt="FC 26">
+        <div class="post-actions">🖤 💬  ⌲</div>
+        <div class="likes">40.001 beğenme</div>
+        <div class="caption">
+          <strong>ardenpapazyan</strong> EA SPORTS FC 26 TRAILER
+        </div>
       </div>
-    </div>
+    </main>
+
+    <aside class="sidebar-right">
+      <div class="user">
+        <div style="display: flex; align-items: center;">
+          <img src="https://i.pravatar.cc/40?img=68" alt="grkn">
+          <span style="font-weight: 500;">grkn</span>
+        </div>
+        <span class="logout">Geçiş Yap</span>
+      </div>
+      <div class="suggestions">
+        <p>Senin için Önerilenler</p>
+        <ul>
+          <li>fred8official <button>Takip Et</button></li>
+          <li>xantarescsgo <button>Takip Et</button></li>
+          <li>trcsoffical <button>Takip Et</button></li>
+        </ul>
+      </div>
+    </aside>
   </div>
-
 </body>
 </html>

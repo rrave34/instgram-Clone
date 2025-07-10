@@ -10,24 +10,29 @@
 <body>
   <div class="container">
     <div class="mockup">
-      <img src="img/instagram-web-lox-image.png " alt="Instagram Görseli" />
+      <img src="img/instagram-web-lox-image.png" alt="Instagram Görseli" />
     </div>
     <div class="form-container">
-        <div class="logo">
-          <img src="img/logo.png" alt="Instagram Logo">
-        <form>
-          <input type="text" placeholder="Telefon numarası, kullanıcı adı veya e-posta" required />
-          <input type="password" placeholder="Şifre" required />
+      <div class="logo">
+        <img src="img/logo.png" alt="Instagram Logo">
+      </div>
+      <div class="form-box"> <!-- ← Eksikti, burası eklendi -->
+        <form action="homepage.html" method="get">
+          <input type="text" class="username-input" placeholder="Telefon numarası, kullanıcı adı veya e-posta" required />
+<input type="password" class="password-input" placeholder="Şifre" required />
           <button type="submit">Giriş yap</button>
         </form>
+
         <div class="divider">
           <div class="line"></div>
           <div class="or">YA DA</div>
           <div class="line"></div>
         </div>
+
         <a href="#" class="fb-login"><i class="fa-brands fa-facebook"></i> Facebook ile Giriş Yap</a>
         <a href="#" class="forgot">Şifreni mi unuttun?</a>
       </div>
+
       <div class="signup-box">
         Hesabın yok mu? <a href="register.html">Kaydol</a>
       </div>
@@ -52,6 +57,5 @@
     </div>
     <div class="footer-copy">© 2025 Instagram from Meta</div>
   </footer>
-
 </body>
 </html>

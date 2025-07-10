@@ -10,7 +10,7 @@
   --lightpurple: #a047fffa;
   --lightgray: #e5e5e5;
   --black: #000000;
-  --dark-cyan: #0069ad;
+  --dark-cyan: #0095f6;
 }
 
 body {
@@ -26,35 +26,31 @@ body {
   display: flex;
   justify-content: center;
   margin: 40px auto;
-  margin-top: 210px;
+  margin-top: 90px;
   max-width: 900px;
   gap: 50px;
 }
 
-
 .mockup img {
-  width: 550px;
-  margin-top: -30px;
-  height: 500px;
+  width: a;
+  height: 450px;
+  margin-top: 150px;
 }
-
 
 .logo img {
   width: 240px;
   height: auto;
   display: block;
-  margin: 0 auto 20px auto;
-  margin-top: -50px;
+  margin: 0    20px;
+  margin-top: 0px;
 }
-
 
 .form-container {
   width: 350px;
 }
 
 .form-box {
-  background-color: var(--white);
-  border: 1px solid var(--border);
+
   padding: 40px;
   text-align: center;
 }
@@ -65,19 +61,28 @@ body {
   margin-bottom: 30px;
 }
 
-form input {
-  width: 80%;
+.username-input {
+  width: 95%;
+  padding: 10px;
+  margin-top: 7%;
+  margin-bottom: 6px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background-color: var(--lightgray);
+}
+
+.password-input {
+  width: 95%;
   padding: 10px;
   margin-bottom: 6px;
-  margin-top: 4px;
-  margin-right: 95px;
+  margin-top: 5px;
   border: 1px solid var(--border);
   border-radius: 3px;
   background-color: var(--lightgray);
 }
 
 button {
-  width: 88%;
+  width: 100%;
   padding: 8px;
   background-color: var(--dark-cyan);
   border: none;
@@ -86,7 +91,6 @@ button {
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
-  margin-right: 70px;
 }
 
 .divider {
@@ -115,7 +119,7 @@ button {
   font-weight: bold;
   display: block;
   margin: 10px 0;
-  margin-left: 50px;
+  text-align: center;
 }
 
 .forgot {
@@ -124,7 +128,7 @@ button {
   color: var(--black);
   margin-top: 10px;
   text-decoration: none;
-  margin-left: 80px;
+  text-align: center;
 }
 
 .signup-box,
@@ -133,7 +137,6 @@ button {
   margin-top: 10px;
   text-align: center;
   font-size: 14px;
-  margin-right: 50px;
 }
 
 .signup-box a,
@@ -145,7 +148,7 @@ button {
 
 /* FOOTER */
 footer {
-  margin-top: 80px;
+  margin-top: 150px;
   font-size: 12px;
   text-align: center;
   color: var(--gray);
@@ -162,32 +165,13 @@ footer {
   margin: 0 6px;
 }
 
-
-.form input {
-  width: 80%;
-  padding: 10px;
-  margin-bottom: 6px;
-  margin-top: 4px;
-  margin-right: 95px;
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  background-color: var(--lightgray);
-}
-
-
 .register-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 120px;
 }
-.logo img {
-  width: 240px;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px auto;
-  margin-top: 6 0px;
-}
+
 .register-box {
   background-color: var(--white);
   border: 1px solid var(--border);
@@ -203,7 +187,7 @@ footer {
 }
 
 .register-form input {
-  width: 35px;
+  width: 100%;
   padding: 10px;
   margin: 6px 0;
   border: 1px solid var(--border);
@@ -212,7 +196,7 @@ footer {
 }
 
 .register-button {
-  width: 90%;
+  width: 100%;
   padding: 10px;
   background-color: var(--dark-cyan);
   color: var(--white);
@@ -248,9 +232,9 @@ footer {
   font-weight: bold;
   text-decoration: none;
   font-size: 14px;
+  display: block;
+  text-align: center;
   margin: 10px 0;
-  margin-right: 150px;
-  margin-left: 50px;
 }
 
 .register-policy {
@@ -279,6 +263,12 @@ footer {
   font-weight: bold;
 }
 
+.app-download {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
 
 @media (max-width: 768px) {
   .container {
@@ -305,26 +295,22 @@ footer {
   form input {
     width: 100%;
     margin: 10px 0;
-    margin-right: 0;
   }
 
   button {
     width: 100%;
-    margin-right: 0;
   }
 
   .fb-login {
-    margin-left: 105px;
+    text-align: center;
   }
 
   .forgot {
-    margin-left: 0;
     text-align: center;
   }
 
   .signup-box,
   .signlog-box {
-    margin-right: 0;
     padding: 20px;
   }
 
